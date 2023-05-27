@@ -14,6 +14,8 @@ import jakarta.persistence.Table;
 public class TaskModel extends DistributionModel {
 
     //Atributos
+    private String clientName;
+
     @Column(columnDefinition = "TEXT")
     private String text;
 
@@ -29,14 +31,22 @@ public class TaskModel extends DistributionModel {
 
     }
 
-    public TaskModel(Long id, String name, Double price, String text, LocalDate initialDate, LocalDate finalDate) {
+    public TaskModel(Long id, String name, Double price, String clientName, String text, LocalDate initialDate, LocalDate finalDate) {
         super(id, name, price);
+        this.clientName = clientName;
         this.text = text;
         this.initialDate = initialDate;
         this.finalDate = finalDate;
     }
 
     //Método Getter e Setter
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
     public String getText() {
         return text;
     }
