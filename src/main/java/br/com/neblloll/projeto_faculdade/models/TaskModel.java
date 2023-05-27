@@ -1,6 +1,10 @@
 package br.com.neblloll.projeto_faculdade.models;
 
 import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -13,7 +17,10 @@ public class TaskModel extends DistributionModel {
     @Column(columnDefinition = "TEXT")
     private String text;
 
+    @JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING)
     private LocalDate initialDate;
+
+    @JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING)
     private LocalDate finalDate;
 
     
