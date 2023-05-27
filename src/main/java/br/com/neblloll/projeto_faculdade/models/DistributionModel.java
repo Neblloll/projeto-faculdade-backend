@@ -1,4 +1,4 @@
-package br.com.neblloll.projeto_faculdade.model;
+package br.com.neblloll.projeto_faculdade.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
