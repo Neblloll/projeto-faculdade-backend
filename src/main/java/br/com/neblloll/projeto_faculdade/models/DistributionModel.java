@@ -14,7 +14,7 @@ public class DistributionModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(length = 160)
     private String name;
 
     private Double price;

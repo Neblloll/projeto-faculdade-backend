@@ -14,15 +14,16 @@ import jakarta.persistence.Table;
 public class TaskModel extends DistributionModel {
 
     //Atributos
+    @Column(length = 160)
     private String clientName;
 
     @Column(columnDefinition = "TEXT")
     private String text;
 
-    @JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING)
+    @JsonFormat(pattern = "MM/dd/yyyy", shape = Shape.STRING)
     private LocalDate initialDate;
 
-    @JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING)
+    @JsonFormat(pattern = "MM/dd/yyyy", shape = Shape.STRING)
     private LocalDate finalDate;
 
     
@@ -43,10 +44,11 @@ public class TaskModel extends DistributionModel {
     public String getClientName() {
         return clientName;
     }
-
+    
     public void setClientName(String clientName) {
         this.clientName = clientName;
     }
+
     public String getText() {
         return text;
     }
